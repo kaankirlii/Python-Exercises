@@ -90,28 +90,3 @@ for a in range(1,11):
   input()
   for b in range(1,11):
     print(a,"x",b,"=",a*b)
-
-"""Adding Two Windows"""
-
-from tkinter import *
-myGui = Tk()
-ss = Tk()
-
-def hello():
-  b=a.get()
-  myLabel3 = Label(ss,text = b,fg='red',bg='yellow',font=10).pack()
-def dele():
-  myLabel1 = Label(myGui,text = 'deleted',fg='red',bg='yellow',font=10).pack()
-
-a=StringVar()
-myGui.title("Hello")
-ss.title("second window")
-myGui.geometry("400x400+100+50")
-ss.geometry("400x400+600+50")
-
-myLabel1 = Label(myGui,text ='label one',fg='red',bg='yellow',font=10).pack()
-myButton1 = Button(myGui,text='enter',fg='black',bg='green',command=hello,font=10).pack()
-myButton2 = Button(ss,text='delete',fg='black',bg='red',command=dele,font=20).pack()
-text = Entry(myGui,textvariable=a).pack()
-
-myGui.mainloop()
